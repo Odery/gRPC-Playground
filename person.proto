@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package main;
 
-option go_package = "github.com/Odery/gRPC-Playground/pds";
+option go_package = "./PBs";
 
 message Person {
   int64 ID = 1;
