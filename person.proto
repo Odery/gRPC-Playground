@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "github.com/Odery/gRPC-Playground/pds";
+
+message Person {
+  int64 ID = 1;
+  string name = 2;
+  string lastName = 3;
+  int32 age = 4;
+  string email = 5;
+
+  optional string comment = 20;
+}
