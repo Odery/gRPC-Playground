@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <script src="wasm_exec.js"></script>
+    <meta charset="UTF-8">
+    <script src="wasm_exec.js"></script>
 </head>
 <body>
 <script>
-  const go = new Go();
-  WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(result => {
-    go.run(result.instance);
-  });
+    const go = new Go();
+    WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(result => {
+        go.run(result.instance);
+    });
 </script>
 <button onclick="helloWasm()">Click me!</button>
 </body>
