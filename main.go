@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/Odery/gRPC-Playground/PBs"
+	"github.com/Odery/gRPC-Playground/pb"
 	"google.golang.org/protobuf/proto"
 	"log"
 	"os"
 )
 
 func main() {
-	p := &PBs.Person{
+	p := &pb.Person{
 		ID:       10,
 		Name:     "Ivan",
 		LastName: "Reznikov",
