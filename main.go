@@ -2,10 +2,11 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"github.com/Odery/gRPC-Playground/pb"
 	"github.com/google/uuid"
 	"google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"log"
 	"net"
 )
@@ -28,7 +29,7 @@ func (_ CustomerServer) CreateCustomer(_ context.Context, nc *pb.NewCustomer) (*
 		}
 		return customer, nil
 	} else {
-		return nil, fmt.Errorf("incorect Customer information")
+		return nil, status.Errorf(codes.InvalidArgument, "incorrect Customer information")
 	}
 }
 
