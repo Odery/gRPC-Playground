@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/Odery/gRPC-Playground";
+option go_package = "github.com/Odery/gRPC-Playground;pb";
 
 service CustomerCreator {
   rpc CreateCustomer(NewCustomer) returns (Customer);
