@@ -14,7 +14,7 @@ message NewCustomer {
 }
 
 message Customer {
-  uint64 ID = 1;
+  uint32 ID = 1;
   string Name = 2;
   string LastName = 3;
   uint32 Age = 4;
