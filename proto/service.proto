@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "github.com/Odery/gRPC-Playground";
+
+service CustomerCreator {
+  rpc CreateCustomer(NewCustomer) returns (Customer);
+}
+
+message NewCustomer {
+  string Name = 1;
+  string LastName = 2;
+  uint32 Age = 3;
+  optional string Comment = 20;
+}
+
+message Customer {
+  uint64 ID = 1;
+  string Name = 2;
+  string LastName = 3;
+  uint32 Age = 4;
+  string AutoLogin = 5;
+
+
+  optional string Comment = 20;
+}
