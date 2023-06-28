@@ -14,7 +14,7 @@ type CustomerServer struct {
 	pb.UnimplementedCustomerCreatorServer
 }
 
-func (_ CustomerServer) CreateCustomer(c context.Context, nc *pb.NewCustomer) (*pb.Customer, error) {
+func (_ CustomerServer) CreateCustomer(_ context.Context, nc *pb.NewCustomer) (*pb.Customer, error) {
 	log.Printf("[INFO]: New Customer recieved: %v\n", nc)
 	if nc.Name != "" && nc.LastName != "" {
 		comment := "test Customer"
